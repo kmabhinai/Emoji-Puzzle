@@ -10,6 +10,8 @@ function flip(){
     else{
         second_card=this;
         check();
+        cards.forEach((card)=>{card.removeEventListener("click",flip);})
+        cards.forEach((card)=> card.addEventListener("click",flip));
     }
 }
 
